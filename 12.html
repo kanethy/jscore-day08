@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  function add(...arr){
+    //      var sum=0;
+    //      for(var v of arr){
+    //         sum+=v;
+    //      }
+    //      return sum;
+    //  }
+
+        var add=(...arr)=>arr.reduce((box,v)=>box+v,0);
+        // function add(...arr){
+        //     var sum=arr.reduce(function(box,v){
+        //         return box+v
+        //     },0)
+        //     return sum;
+        // }
+
+     console.log(add(1,2,3));
+     console.log(add(1,2,3,4,5));
+
+     function jisuan(sname,...arr){
+
+         console.log(`${sname}的总工资是：${arr.reduce((box,v)=>box+v,0)}`)}
+
+    jisuan("lilei",1000,2000,3000);
+    jisuan("han meimei",10000,2000);
+
+    var arr=[7,9,39,10];
+    console.log(Math.max(7,9,39,10));
+    console.log(Math.min(7,9,39,10));
+
+    console.log(Math.max.apply(null,arr));
+    console.log(Math.min.apply(null,arr));
+
+    console.log(Math.max(...arr));
+    console.log(Math.min(...arr));
+
+
+    var arr=[1,2,3];
+    var arr2=[...arr];
+    console.log(arr2);
+    console.log(arr2==arr);
+
+    var arr=[1,2,3];
+    var arr1=[5,6,7];
+    var arr3=[...arr,4,...arr1,8];
+    console.log(arr3);
+    
+    var lilei={
+        sname:"lilei",
+        sage:12
+    }
+    var lilei2={...lilei};
+    console.log(lilei2);
+    console.log(lilei2==lilei);
+
+    var str={a:1,b:2};
+    var str1={d:4,e:5};
+    var str2={...str,c:3,...str1,f:6};
+    console.log(str2);
+
+    </script>
+</body>
+</html>
